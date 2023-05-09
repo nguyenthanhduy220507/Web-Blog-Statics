@@ -1,0 +1,46 @@
+.view_details {
+    --color: rgb(187, 90, 58);
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .view_details:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .view_details:hover {
+    color: #fff;
+   }
+   
+   .view_details:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .view_details:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .view_details:active:before {
+    background: rgb(187, 90, 58);
+    transition: background 0s;
+   }
