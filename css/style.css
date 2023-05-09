@@ -1,0 +1,372 @@
+/* body {
+  background-image: url('path/to/image.jpg');
+  background-size: cover;
+  background-position: center center;
+} */
+
+ .slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+.slide img{
+  width: 800px;
+  height: 500px;
+}  
+/* css nagavition */
+
+ .navigation-manual{
+  position: absolue;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn{
+  border: 2px solid orange;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}  
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+.manual-btn:hover{
+  background: orange;
+}
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+/* #radio4:checked ~ .first{
+  margin-left: -60%;
+} */
+
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.title {
+  color: inherit; /* loại bỏ màu xanh */
+  text-decoration: none; /* loại bỏ gạch chân */
+}
+
+.title:hover {
+  cursor: pointer;
+  color: orange; /* thêm màu vàng khi hover */
+}
+
+a.text-dark {
+  text-decoration: none;
+}
+.img{
+  cursor: pointer;
+}
+
+
+/* .navigation-auto div{
+  border: 2px solid blue;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+} */
+/* .navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+} */
+/* 
+#radio1:checked ~  .navigation-auto  .auto-btn1{
+  background: blue;
+}
+ #radio2:checked ~.navigation-auto .auto-btn2{
+  background: blue;
+}
+#radio3:checked ~.navigation-auto .auto-btn3{
+  background: blue;
+}
+#radio4:checked ~.navigation-auto .auto-btn4{
+  background: blue;
+}  */
+/*Chinh card*/
+.container2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container2 .card {
+ 
+  position: relative;
+  width: 500px;
+  height: 230px;
+  padding: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+.container2 .card h6 {
+  z-index: 1000;
+  position: absolute;
+  bottom: 25px;
+ left: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+  transition: .2s ease;
+  text-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+.container2 .card p {
+  z-index: 1000;
+  position: absolute;
+  bottom: 30px;
+  right: 130px;
+  width: 150px;
+  color: #fff;
+  opacity: 0;
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 1px;
+  transition: .2s ease;
+}
+.container2 .card span {
+  z-index: 1000;
+
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  color: #333;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  transition: .2s ease;
+  opacity: .7;
+}
+.container2 .card .pic{
+  z-index: 100;
+  width: 395px;
+  height: 200px;
+  /* background-image: url(./img/downloadVideo.png); */
+  background-size: cover;
+  border-radius: 12px;
+  filter: grayscale(100%);
+  transition: .3s ease;
+}
+.container2 .card button {
+  z-index: 100;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: #da4d1d;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  transition: .3s ease;
+}
+.container2 .card:hover button {
+  transform: scale(16.5);
+  opacity: .5;
+}
+.container2 .card:hover h6 {
+  bottom: 80px;
+  right: 50px;
+}
+.container2 .card:hover p {
+  opacity: 1;
+  right: 60px;
+}
+.container2 .card:hover span {
+  opacity: 0;
+  top: 80px;
+}
+.container2 .card:hover .pic {
+  filter: grayscale(0);
+  width: 470px;
+}
+.container2 .card2 .pic {
+  /* background-image: url(./img/Caro.jpg); */
+  transition: .3s ease;
+}
+.container2 .card2 button {
+  z-index: 100;
+  background-color: #2b26c3;
+}
+  /*button*/
+  #allposts {
+    --color: rgb(187, 90, 58);
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   #allposts:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   #allposts:hover {
+    color: #fff;
+   }
+   
+   #allposts:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   #allposts:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   #allposts:active:before {
+    background: rgb(187, 90, 58);
+    transition: background 0s;
+   }
+   /*Responsive*/
+   @media (max-width: 576px){
+    .slider{
+      margin-top: 20%;
+      margin-right: 50%;
+      width: 300px;
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+    .container2 .card {
+ 
+      position: relative;
+      width: 320px;
+      height: 230px;
+      padding: 15px;
+      background-color: #fff;
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    }
+    .navigation-manual{
+      position: absolue;
+      width: 800px;
+      margin-top: -40px;
+      display: flex;
+      margin-left: 100px;
+      justify-content: left;
+    }
+   }
+   @media screen and (min-width: 768px) and (max-width: 959px) {
+    /* Your CSS styles here */
+    .slider{
+      margin-top: 20%;
+      margin-right: 50%;
+      width: 500px;
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+    .container2 .card {
+ 
+      position: relative;
+      width: 420px;
+      height: 230px;
+      padding: 15px;
+      background-color: #fff;
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    }
+    .navigation-manual{
+      position: absolue;
+      width: 800px;
+      margin-top: -40px;
+      display: flex;
+      margin-left: 200px;
+      justify-content: left;
+    }
+  }
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    /* Your CSS styles here */
+    .slider{
+      margin-top: 20%;
+      margin-right: 50%;
+      width: 400px;
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+    .container2 .card {
+ 
+      position: relative;
+      width: 420px;
+      height: 230px;
+      padding: 15px;
+      background-color: #fff;
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    }
+    .navigation-manual{
+      position: absolue;
+      width: 800px;
+      margin-top: -40px;
+      display: flex;
+      margin-left: 200px;
+      justify-content: left;
+    }
+  }
+  
